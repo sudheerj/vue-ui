@@ -1,20 +1,16 @@
 <template>
-  <button
+  <button ref="myButton"
     :class="styleClass"
     :disabled="disabled"
-    :label = "label"
-    name="button"
     @click="handleClick"
-  >
-    <slot></slot>
-    <span class=""></span>
+    name="button">
   </button>
 </template>
-
+<style lang="css" src="./button.css"></style>
 <script>
   export default {
-    name: 'VueButton',
-    data() {
+    name: 'vueui-button',
+    data: function() {
         return {
           cornerStyleClass: 'ui-corner-all'
         }
@@ -42,6 +38,20 @@
         this.$emit('click', e)
       }
     },
+    mounted: function () {
+      if(this.icon) {
+        let iconElement = document.createElement("span");
+        let iconPosClass = (this.iconPos == 'right') ? 'ui-button-icon-right': 'ui-button-icon-left';
+        iconElement.className = iconPosClass  + ' ui-clickable fa fa-fw ' + this.icon;
+        this.$el.appendChild(iconElement);
+      }
+
+      let labelElement = document.createElement("span");
+      labelElement.className = 'ui-button-text ui-clickable';
+      labelElement.appendChild(document.createTextNode(this.label||'ui-btn'));
+      this.$el.appendChild(labelElement);
+      this.initialized = true;
+    },
     computed: {
       styleClass: function () {
         let styleClass = 'ui-button ui-widget ui-state-default ' + this.cornerStyleClass;
@@ -67,6 +77,3 @@
     }
   }
 </script>
-<link rel="stylesheet" type="text/css" href="button.css">
-<link rel="stylesheet" type="text/css" href="../../assets/vueui.css">
-<link rel="stylesheet" type="text/css" href="../../assets/themes/omega/theme.css">

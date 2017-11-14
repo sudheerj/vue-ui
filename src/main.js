@@ -5,9 +5,16 @@ import App from './App.vue';
 
 Vue.config.productionTip = false;
 
+import VueUIButton from './components/button/index'
+import VueUIProgressSpinner from './components/progressspinner/index'
+import VueUIProgressBar from './components/progressbar/index'
+
+Vue.use(VueUIButton)
+Vue.use(VueUIProgressBar)
+Vue.use(VueUIProgressSpinner)
+
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
-    template: '<App/>',
-    components: { App }
+    render: h => h(App)
 });
