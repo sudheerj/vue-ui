@@ -1,0 +1,36 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue';
+//import App from './App.vue';
+import VueRouter from 'vue-router'
+import VueHighlightJS from 'vue-highlightjs'
+import VueUI from '../src/index.js'
+
+Vue.config.productionTip = false;
+
+
+Vue.use(VueUI)
+Vue.use(VueHighlightJS)
+Vue.use(VueRouter)
+
+import ButtonDemo from './src/components/button/buttondemo.vue'
+import ProgressbarDemo from './src/components/progressbar/progressbardemo.vue'
+import ProgressSpinnerDemo from './src/components/progressspinner/progressspinnerdemo.vue'
+import Index from './src/components/index.vue'
+
+const routes = [
+  { path: '/components/button', component: ButtonDemo },
+  { path: '/components/progressspinner', component: ProgressSpinnerDemo },
+  { path: '/components/progressbar', component: ProgressbarDemo },
+  { path: '/components/index', component: Index },
+  { path: '/', redirect: '/components/index' }
+]
+const router = new VueRouter({
+  routes: routes
+})
+
+/* eslint-disable no-new */
+new Vue({
+  router: router,
+  template: '<router-view></router-view>'
+}).$mount('#app')
