@@ -9,7 +9,7 @@
 npm install --save vue-ui
 ```
 
-##Quick start
+## Quick start
 ``` javascript
 import Vue from 'vue'
 import VueUI from 'vue-ui'
@@ -17,7 +17,7 @@ import VueUI from 'vue-ui'
 Vue.use(VueUI)
 ```
 
-### Components
+## Components
 
 - Button
 - ProgressSpinner
@@ -25,26 +25,26 @@ Vue.use(VueUI)
 - Checkbox
 - TriStateCheckbox
 
-# serve with hot reload at localhost:8080
+#### serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+#### build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
+#### build for production and view the bundle analyzer report
 npm run build --report
 
-# run unit tests
+#### run unit tests
 npm run unit
 
-# run e2e tests
+#### run e2e tests
 npm run e2e
 
-# run all tests
+#### run all tests
 npm test
 
 
-## LICENSE
+### LICENSE
 MIT
 
 [daviddm-image]: https://david-dm.org/sudheerj/vue-ui.svg?theme=shields.io
