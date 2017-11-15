@@ -1,12 +1,29 @@
 # vue-ui
+[![Dependency Status][daviddm-image]][daviddm-url] ![Crates.io](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 > Component library for VueJS framework
 
-## Build Setup
+## Install
 
-``` bash
-# install dependencies
+``` shell
 npm install --save vue-ui
+```
+
+##Quick start
+``` javascript
+import Vue from 'vue'
+import VueUI from 'vue-ui'
+
+Vue.use(VueUI)
+```
+
+### Components
+
+- Button
+- ProgressSpinner
+- ProgressBar
+- Checkbox
+- TriStateCheckbox
 
 # serve with hot reload at localhost:8080
 npm run dev
@@ -25,6 +42,10 @@ npm run e2e
 
 # run all tests
 npm test
-```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## LICENSE
+MIT
+
+[daviddm-image]: https://david-dm.org/sudheerj/vue-ui.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/sudheerj/vue-ui
