@@ -1,9 +1,14 @@
 <template>
   <div id="app">
-    <h3>Progress Spinner</h3>
-    <vueui-progressSpinner></vueui-progressSpinner>
-    <h3>Custom</h3>
-    <vueui-progressSpinner style="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></vueui-progressSpinner>
+    <vueui-button @click="back" label="Back" style="left:0px"></vueui-button>
+    <div id="wrapper">
+      <h2>Features</h2>
+      <h3>1. Basic</h3>
+      <vueui-progressSpinner></vueui-progressSpinner>
+      <h3>2. Custom</h3>
+      <vueui-progressSpinner style="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE"
+                             animationDuration=".5s"></vueui-progressSpinner>
+    </div>
   </div>
 </template>
 <style lang="scss" src="../../../../src/assets/themes/omega/theme.scss"></style>
@@ -12,24 +17,21 @@
 
   export default {
     name: 'progressspinnerdemo',
-    data: function(){
+    data: function () {
       return {
         value: 100
       }
 
     },
     methods: {
-      clickMe: function (event) {
-        if(event) {
-          alert(event.target.innerText)
-        }
-
+      back: function () {
+        this.$router.go(-1);
       }
     }
   };
 </script>
 <style>
-  #app {
+  #wrapper {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

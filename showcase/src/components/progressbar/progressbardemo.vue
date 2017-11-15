@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <h3>Progress Bar</h3>
-    <h3>Dynamic</h3>
-    <vueui-progressBar :value="value"></vueui-progressBar>
-    <h3>Static</h3>
-    <vueui-progressBar :value="50"></vueui-progressBar>
+    <vueui-button @click="back" label="Back" style="left:0px"></vueui-button>
+    <div id="wrapper">
+      <h2>Features</h2>
+      <h3>1. Dynamic</h3>
+      <vueui-progressBar :value="value"></vueui-progressBar>
+      <h3>2. Static</h3>
+      <vueui-progressBar :value="50"></vueui-progressBar>
 
-    <h3>Indeterminate</h3>
-    <vueui-progressBar mode="indeterminate" :style="{'height': '6px'}"></vueui-progressBar>
+      <h3>3. Indeterminate</h3>
+      <vueui-progressBar mode="indeterminate" :style="{'height': '6px'}"></vueui-progressBar>
+    </div>
   </div>
 </template>
 <style lang="scss" src="../../../../src/assets/themes/omega/theme.scss"></style>
@@ -16,24 +19,21 @@
 
   export default {
     name: 'progressbardemo',
-    data: function(){
+    data: function () {
       return {
         value: 100
       }
 
     },
     methods: {
-      clickMe: function (event) {
-        if(event) {
-          alert(event.target.innerText)
-        }
-
+      back: function () {
+        this.$router.go(-1);
       }
     }
   };
 </script>
 <style>
-  #app {
+  #wrapper {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

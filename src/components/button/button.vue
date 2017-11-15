@@ -22,7 +22,7 @@
       },
       label: {
         type: String,
-        default: 'Button'
+        default: null
       },
       icon: {
         type: String,

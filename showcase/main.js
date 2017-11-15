@@ -16,12 +16,16 @@ Vue.use(VueRouter)
 import ButtonDemo from './src/components/button/buttondemo.vue'
 import ProgressbarDemo from './src/components/progressbar/progressbardemo.vue'
 import ProgressSpinnerDemo from './src/components/progressspinner/progressspinnerdemo.vue'
+import CheckboxDemo from './src/components/checkbox/checkboxdemo.vue'
+import TristateCheckboxDemo from './src/components/tristatecheckbox/tristatecheckboxdemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
   { path: '/components/button', component: ButtonDemo },
   { path: '/components/progressspinner', component: ProgressSpinnerDemo },
   { path: '/components/progressbar', component: ProgressbarDemo },
+  { path: '/components/checkbox', component: CheckboxDemo },
+  { path: '/components/tristatecheckbox', component: TristateCheckboxDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]
