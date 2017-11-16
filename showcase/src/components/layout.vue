@@ -1,12 +1,17 @@
 <template>
   <div class="layout-wrapper">
     <div slot="header">
-    <header-layout></header-layout>
+      <header-layout></header-layout>
     </div>
     <div slot="sider">
-    <sidebar-layout></sidebar-layout>
+      <sidebar-layout></sidebar-layout>
     </div>
-    <footer-layout></footer-layout>
+    <div slot="content">
+      <slot></slot>
+    </div>
+    <div>
+      <footer-layout></footer-layout>
+    </div>
   </div>
 </template>
 <style lang="css" src="../assets/css/showcase.css"></style>
@@ -17,9 +22,9 @@
 
   export default {
     components: {
-        HeaderLayout,
-        SidebarLayout,
-        FooterLayout
+      HeaderLayout,
+      SidebarLayout,
+      FooterLayout
     },
     name: 'Layout'
 

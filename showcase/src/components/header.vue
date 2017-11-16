@@ -1,5 +1,5 @@
 <template>
-<div id="layout-topbar">
+<div id="layout-topbar" class="content-section introduction">
   <a href="#" class="menu-button" click="onMenuButtonClick">
     <i class="fa fa-bars"></i>
   </a>
@@ -7,6 +7,7 @@
   <a href="#" class="logo" >
     <img alt="logo" src="../assets/images/logo.png" />
   </a>
+
 
   <ul class="topbar-menu">
     <!--<li>

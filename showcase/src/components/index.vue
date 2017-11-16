@@ -1,19 +1,22 @@
 <template>
-  <layout >
-    <h2>Vue-UI</h2>
-    <h5>A Vue.js Component library.</h5>
-    <h3>Install</h3>
-    <p>Install using npm package manager</p>
-    <pre v-highlightjs><code class="bash">$ npm install vue-ui --save</code></pre>
-    <h3>Quick Start</h3>
-    <p>vue-cli</p>
-    <pre v-highlightjs><code class="bash">$ npm install -g vue-cli
+
+    <layout>
+      <div style="text-align: center;margin-top: 80px;">
+      <h2>Vue-UI</h2>
+      <h5>A Vue.js Component library.</h5>
+      </div>
+      <div id="wrapper">
+      <h3>Install</h3>
+      <p>Install using npm package manager</p>
+      <pre v-highlightjs><code class="bash">$ npm install vue-ui --save</code></pre>
+      <h3>Quick Start (Using vue-cli)</h3>
+      <pre v-highlightjs><code class="bash">$ npm install -g vue-cli
 $ vue init webpack vue-app
 $ cd vue-app
 $ npm install vue-ui --save </code></pre>
 
-    <h4>main.js</h4>
-    <pre v-highlightjs><code class="javascript">
+      <h4>main.js</h4>
+      <pre v-highlightjs><code class="javascript">
 import Vue from &#x27;vue&#x27;
 import App from &#x27;./App&#x27;
 import VueUI from &#x27;vue-ui&#x27;
@@ -29,8 +32,8 @@ new Vue({
   components: { App }
 })
 </code></pre>
-    <h4>App.vue</h4>
-    <pre v-highlightjs><code class="html">&lt;template&gt;
+      <h4>App.vue</h4>
+      <pre v-highlightjs><code class="html">&lt;template&gt;
   &lt;div id=&quot;app&quot;&gt;
     &lt;router-view&gt;&lt;/router-view&gt;
     &lt;vueui-button&gt;Testing&lt;/vueui-button&gt;
@@ -54,13 +57,27 @@ export default {
 }
 &lt;/style&gt;
 </code></pre>
-    <h4>run</h4>
-    <pre v-highlightjs><code class="bash">$ npm run dev</code></pre>
-  </layout>
+      <h4>Run</h4>
+      <pre v-highlightjs><code class="bash">$ npm run dev</code></pre>
+      </div>
+    </layout>
+
 </template>
 <script>
   import Layout from './layout.vue'
   export default {
-    components: {Layout}
+    components: {Layout},
+    name: 'indexdemo'
   }
 </script>
+<style>
+  #wrapper {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*text-align: center;*/
+    color: #2c3e50;
+    margin-top: 80px;
+    margin-left: 330px;
+  }
+</style>

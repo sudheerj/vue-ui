@@ -1,47 +1,71 @@
 <template>
   <div id="app">
+    <layout>
+      <div class="content-section introduction" id="component">
+        <div>
+          <span class="feature-title">Button</span>
+          <span>Button is an extension to standard input element with icons and theming.</span>
+        </div>
+      </div>
+      <div id="wrapper">
 
-    <vueui-button @click="back" label="Back" style="left:0px"></vueui-button>
-    <div id="wrapper">
-      <h2>Features</h2>
+        <h2>Features</h2>
 
-      <h3>1. Icon positions</h3>
+        <h3>1. Icon positions</h3>
 
-      <vueui-button type="button" icon="fa-check" label="Click"></vueui-button>
+        <p>Icon on a button is specified with icon attribute and position is customized using iconPos attribute. Default icon position is left. To display only an icon, leave label as undefined.</p>
 
-      <vueui-button type="button" icon="fa-check" iconPos="right" label="Click"></vueui-button>
+        <vueui-button type="button" icon="fa-check" label="VueJS"></vueui-button>
 
-      <vueui-button type="button" icon="fa-close"></vueui-button>
+        <vueui-button type="button" icon="fa-check" iconPos="right" label="VueJS"></vueui-button>
 
-      <vueui-button type="button" icon="fa-check" :disabled="true" label="Disabled"></vueui-button>
+        <vueui-button type="button" icon="fa-close"></vueui-button>
 
-      <h3>2. Severity Buttons</h3>
+        <h3>2. Severity Buttons</h3>
 
-      <vueui-button type="button" label="Primary"></vueui-button>
+        <p>Different color options are available to define severity levels.</p>
+        <ul>
+          <li>.ui-button-secondary</li>
+          <li>.ui-button-success</li>
+          <li>.ui-button-info</li>
+          <li>.ui-button-warning</li>
+          <li>.ui-button-danger</li>
+        </ul>
 
-      <vueui-button type="button" label="Secondary" class="ui-button-secondary"></vueui-button>
+        <vueui-button type="button" label="Primary"></vueui-button>
 
-      <vueui-button type="button" label="Success" class="ui-button-success"></vueui-button>
+        <vueui-button type="button" label="Secondary" class="ui-button-secondary"></vueui-button>
 
-      <vueui-button type="button" label="Info" class="ui-button-info"></vueui-button>
+        <vueui-button type="button" label="Success" class="ui-button-success"></vueui-button>
 
-      <vueui-button type="button" label="Warning" class="ui-button-warning"></vueui-button>
+        <vueui-button type="button" label="Info" class="ui-button-info"></vueui-button>
 
-      <vueui-button type="button" label="Danger" class="ui-button-danger"></vueui-button>
+        <vueui-button type="button" label="Warning" class="ui-button-warning"></vueui-button>
 
-      <h3>3. Events</h3>
+        <vueui-button type="button" label="Danger" class="ui-button-danger"></vueui-button>
 
-      <vueui-button type="button" label="Click" @click="clickMe"></vueui-button>
+        <h3>3. Events</h3>
+        <p>The button component supports click event</p>
 
-    </div>
+        <vueui-button type="button" label="Click" @click="clickMe"></vueui-button>
+
+        <h3>4. Disabled</h3>
+        <p>The component disabled using disabled attribute</p>
+
+        <vueui-button type="button" icon="fa-check" :disabled="true" label="Disabled"></vueui-button>
+
+      </div>
+    </layout>
   </div>
 </template>
 <style lang="scss" src="../../../../src/assets/themes/omega/theme.scss"></style>
 <style lang="css" src="../../../../node_modules/font-awesome/css/font-awesome.min.css"></style>
 <script>
+  import Layout from "../layout";
 
   export default {
     name: 'buttondemo',
+    components: {Layout},
     data: function () {
       return {}
 
@@ -64,9 +88,20 @@
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    /*text-align: center;*/
+    margin-left: 330px;
     color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 40px;
+  }
+
+  #component {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*text-align: center;*/
+    margin-left: 300px;
+    color: #ffffff;
+    margin-top: 70px;
   }
 </style>
 
