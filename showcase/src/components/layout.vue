@@ -30,3 +30,24 @@
 
   }
 </script>
+<style>
+  #wrapper {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*text-align: center;*/
+    margin-left: 330px;
+    color: #2c3e50;
+    margin-top: 40px;
+  }
+
+  #component {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*text-align: center;*/
+    margin-left: 300px;
+    color: #ffffff;
+    margin-top: 70px;
+  }
+</style>

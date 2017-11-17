@@ -350,7 +350,6 @@ body {
 .layout-footer {
   font-size: 14px;
   color: #84939f;
-  margin-bottom: 10px;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -359,13 +358,13 @@ body {
 }
 
 .layout-footer .footer-links {
-  /*float: right;*/
+  float: right;
   font-size: 24px;
 }
 
 .layout-footer .footer-links a {
   color: #000000;
-  /*margin-left: 16px;*/
+  margin-left: 16px;
 }
 
 /* Demos */

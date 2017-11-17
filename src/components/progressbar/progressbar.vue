@@ -1,11 +1,11 @@
 <template>
-  <div :class="indicatorStyleClass" :style="indicatorStyle" role="progressbar" aria-valuemin="0" :aria-valuenow="value" aria-valuemax="100"
-       class="{'ui-progressbar ui-widget ui-widget-content ui-corner-all': true, 'ui-progressbar-determinate': (mode === 'determinate'), 'ui-progressbar-indeterminate': (mode === 'indeterminate')}">
+  <div :style="indicatorStyle" role="progressbar" aria-valuemin="0" :aria-valuenow="value" aria-valuemax="100"
+       :class="{'indicatorStyleClass': true,'ui-progressbar ui-widget ui-widget-content ui-corner-all': true, 'ui-progressbar-determinate': (mode === 'determinate'), 'ui-progressbar-indeterminate': (mode === 'indeterminate')}">
     <div class="ui-progressbar-value ui-progressbar-value-animate ui-widget-header ui-corner-all" :style="{width: value + '%', display :'block'}" ></div>
     <div class="ui-progressbar-label" :style="value ? 'display: block' : 'display: none'" v-if="showValue">{{value}}{{unit}}</div>
   </div>
 </template>
-<!--<style lang="css" src="./progressbar.css"></style>-->
+<style lang="scss" src="./progressbar.scss"></style>
 <script>
   var data = { cornerStyleClass: 'ui-corner-all'}
   export default {

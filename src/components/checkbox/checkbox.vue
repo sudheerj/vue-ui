@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div :style="checkboxStyle" class="'ui-chkbox ui-widget'" :class="checkboxStyleClass">
+  <div :style="checkboxStyle" class="ui-chkbox ui-widget" :class="checkboxStyleClass">
     <div class="ui-helper-hidden-accessible">
       <input ref="cb" type="checkbox" :id="inputId" :name="name" :value="value" :checked="checked" @focus="onFocus"
              @blur="onBlur"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :style="checkboxStyle" :lass="'ui-chkbox ui-tristatechkbox ui-widget'" :class="checkboxStyleClass">
+    <div :style="checkboxStyle" class="ui-chkbox ui-tristatechkbox ui-widget" :class="checkboxStyleClass">
       <div class="ui-helper-hidden-accessible">
         <input ref=""input" type="text" :id="inputId" :name="name" :tabindex="tabindex" readonly :disabled="disabled" @keyup="onKeyup($event)" @keydown="onKeydown($event)" @focus="onFocus()" @blur="onBlur()">
       </div>

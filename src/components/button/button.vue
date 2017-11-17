@@ -50,7 +50,7 @@
       labelElement.className = 'ui-button-text ui-clickable';
       labelElement.appendChild(document.createTextNode(this.label||'ui-btn'));
       this.$el.appendChild(labelElement);
-      this.initialized = true;
+      //this.initialized = true;
     },
     computed: {
       styleClass: function () {

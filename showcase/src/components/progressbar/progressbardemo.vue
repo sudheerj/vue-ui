@@ -23,7 +23,6 @@
     </layout>
   </div>
 </template>
-<style lang="css" src="../../../../src/assets/vue.css"></style>
 <style lang="scss" src="../../../../src/assets/themes/omega/theme.scss"></style>
 <style lang="css" src="../../../../node_modules/font-awesome/css/font-awesome.min.css"></style>
 <script>
@@ -33,9 +32,19 @@
     components: {Layout},
     data: function () {
       return {
-        value: 100
+        value: 0
       }
 
+    },
+    mounted: function () {
+      let interval = setInterval(() => {
+        this.value = this.value + Math.floor(Math.random() * 10) + 1;
+        if(this.value >= 100) {
+          this.value = 100;
+          this.msgs = [{severity: 'info', summary: 'Success', detail: 'Process Completed'}];
+          clearInterval(interval);
+        }
+      }, 2000);
     },
     methods: {
       back: function () {
@@ -44,15 +53,5 @@
     }
   };
 </script>
-<style>
-  #wrapper {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /*text-align: center;*/
-    margin-left: 330px;
-    color: #2c3e50;
-    margin-top: 40px;
-  }
-</style>
+
 
