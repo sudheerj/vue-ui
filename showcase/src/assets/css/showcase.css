@@ -7,7 +7,8 @@
 }
 /*  ----------------------------------------------------------------------------------------------------- */
 html {
-  height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
@@ -349,7 +350,12 @@ body {
 .layout-footer {
   font-size: 14px;
   color: #84939f;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .layout-footer .footer-links {
@@ -926,5 +932,4 @@ a {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
-
 
