@@ -58,8 +58,6 @@
     </layout>
   </div>
 </template>
-<style lang="scss" src="../../../../src/assets/themes/omega/theme.scss"></style>
-<style lang="css" src="../../../../node_modules/font-awesome/css/font-awesome.min.css"></style>
 <script>
   import Layout from "../layout";
 

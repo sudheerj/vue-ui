@@ -15,6 +15,8 @@
   </div>
 </template>
 <style lang="css" src="../assets/css/showcase.css"></style>
+<style id="current-theme" lang="scss" src="../../../src/assets/themes/omega/theme.scss"></style>
+<style lang="css" src="../../../node_modules/font-awesome/css/font-awesome.min.css"></style>
 <script>
   import HeaderLayout from './header.vue'
   import FooterLayout from './footer.vue'
@@ -26,7 +28,14 @@
       SidebarLayout,
       FooterLayout
     },
-    name: 'Layout'
+    name: 'Layout',
+    methods:{
+      changeTheme(event, theme) {
+        let themeLink =  document.getElementById('current-theme');
+        themeLink.href = '../../../src/assets/themes/' + theme + '/theme.scss';
+        event.preventDefault();
+      }
+    }
 
   }
 </script>
@@ -39,6 +48,7 @@
     margin-left: 330px;
     color: #2c3e50;
     margin-top: 40px;
+    margin-bottom: 100px;
   }
 
   #component {
