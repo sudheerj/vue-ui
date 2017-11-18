@@ -27,6 +27,12 @@ Vue.use(VueUI)
 - TriStateCheckbox
 - Rating
 
+<hr/>
+
+To encourage us and if you like the project then click start(💫)
+<hr/>
+
+## How to Run
 
 #### serve with hot reload at localhost:8080
 ``` shell
