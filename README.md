@@ -19,30 +19,43 @@ Vue.use(VueUI)
 
 ## Components
 
+- Charts(8 types)
 - Button
 - ProgressSpinner
 - ProgressBar
 - Checkbox
 - TriStateCheckbox
 
+
 #### serve with hot reload at localhost:8080
+``` shell
 npm run dev
+```
 
 #### build for production with minification
+``` shell
 npm run build
+```
 
 #### build for production and view the bundle analyzer report
+``` shell
 npm run build --report
+```
 
 #### run unit tests
+``` shell
 npm run unit
+```
 
 #### run e2e tests
+``` shell
 npm run e2e
+```
 
 #### run all tests
+``` shell
 npm test
-
+```
 
 ### LICENSE
 MIT

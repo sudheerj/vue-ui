@@ -19,6 +19,7 @@ import ProgressSpinnerDemo from './src/components/progressspinner/progressspinne
 import CheckboxDemo from './src/components/checkbox/checkboxdemo.vue'
 import TristateCheckboxDemo from './src/components/tristatecheckbox/tristatecheckboxdemo.vue'
 import ChartsDemo from './src/components/charts/chartsdemo.vue'
+import RatingDemo from './src/components/rating/ratingdemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -28,6 +29,7 @@ const routes = [
   { path: '/components/checkbox', component: CheckboxDemo },
   { path: '/components/tristatecheckbox', component: TristateCheckboxDemo },
   { path: '/components/charts', component: ChartsDemo },
+  { path: '/components/rating', component: RatingDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]

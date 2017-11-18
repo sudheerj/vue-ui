@@ -169,7 +169,7 @@
     datasets: [{
       data: [45, 35, 10, 15, 5],
       backgroundColor: ['#6544a9', '#51cc00', '#5d4361', '#E7E9ED', '#36A2EB'],
-      label: 'Prime Libraries'
+      label: 'Single page application frameworks'
     }],
     labels: ['VueJS', 'Angular', 'React', 'Ember', 'Meteor.js']
   };
