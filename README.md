@@ -19,12 +19,13 @@ Vue.use(VueUI)
 
 ## Components
 
-- Charts(pie,bar,horizontalBar,line,doughnut,area,radar and bubble)
+- Charts (pie,bar,horizontalBar,line,doughnut,area,radar and bubble)
 - Button
 - ProgressSpinner
 - ProgressBar
 - Checkbox
 - TriStateCheckbox
+- Rating
 
 
 #### serve with hot reload at localhost:8080
