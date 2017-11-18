@@ -13,7 +13,7 @@
 
         <h3>1. Icon positions</h3>
 
-        <p>Icon on a button is specified with icon attribute and position is customized using iconPos attribute. Default icon position is left. To display only an icon, leave label as undefined.</p>
+        <p>The icon of a button is specified using icon attribute and position is customized using iconPos attribute. The default icon position is left. To display only an icon, leave label as undefined.</p>
 
         <vueui-button type="button" icon="fa-check" label="VueJS"></vueui-button>
 

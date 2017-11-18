@@ -32,7 +32,7 @@
     methods:{
       changeTheme(event, theme) {
         let themeLink =  document.getElementById('current-theme');
-        themeLink.href = '../../../src/assets/themes/' + theme + '/theme.scss';
+        themeLink.href = '../../../src/assets/themes/' + theme + '/theme.css';
         event.preventDefault();
       }
     }

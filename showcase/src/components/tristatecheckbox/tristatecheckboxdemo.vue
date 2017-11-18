@@ -13,7 +13,12 @@
         <h3>1. Basic</h3>
         <p>Three states of element can be displayed in an icon format.</p>
         <h3>Boolean - {{checked}}</h3>
-        <vueui-tristatecheckbox v-model="checked" binary="true"></vueui-tristatecheckbox>
+        <vueui-tristatecheckbox v-model="checked" ></vueui-tristatecheckbox>
+
+        <h3>2. Disabled</h3>
+        <p>The checkbox selection is prevented using disabled attribute.</p>
+        <h3>Boolean - {{checked}}</h3>
+        <vueui-tristatecheckbox v-model="checked" disabled="true"></vueui-tristatecheckbox>
 
       </div>
     </layout>
@@ -26,15 +31,10 @@
     components: {Layout},
     data: function () {
       return {
-        checked: false
+        checked: false,
+        disabledCheck: true
       }
 
-    },
-    methods: {
-
-      back: function () {
-        this.$router.go(-1);
-      }
     }
   };
 </script>

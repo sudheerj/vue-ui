@@ -119,6 +119,9 @@
         else
           this.model = [this.value];
       }
+    },
+    mounted: function () {
+      this.checked = this.isChecked();
     }
   }
 </script>

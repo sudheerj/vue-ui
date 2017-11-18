@@ -17,7 +17,7 @@
        <vueui-progressBar :value="50"></vueui-progressBar>
 
         <h3>3. Indeterminate</h3>
-        The progress bar displayed without any bound using mode attribute instead of showing value between 0 and 100
+        The progress bar displayed without any bound using mode attribute instead of showing the value between 0 and 100
         <vueui-progressBar mode="indeterminate" :style="{'height': '6px'}"></vueui-progressBar>
       </div>
     </layout>

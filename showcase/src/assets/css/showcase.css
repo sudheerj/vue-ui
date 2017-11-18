@@ -70,12 +70,13 @@ body {
 
 #layout-topbar .logo {
   margin-left: 45px;
-  margin-top: 15px;
-  display: inline-block;
+/*  margin-top: 15px;*/
+  display: block;
 }
 
 #layout-topbar .logo img {
-  height: 42px;
+  width: 100px;
+  height: 50px;
 }
 
 .topbar-menu {
@@ -324,7 +325,7 @@ body {
   display: block;
   border-bottom: solid 1px #dde3e6;
   padding: 30px;
-  overflow: hidden;
+  overflow: visible;
   background-color: #f5f7f8;
 }
 
@@ -546,7 +547,7 @@ body {
   }
 
   #layout-topbar .logo {
-    margin: 7px 0 7px 0;
+    margin: 0px 0 7px 0;
   }
 
   .topbar-menu {
