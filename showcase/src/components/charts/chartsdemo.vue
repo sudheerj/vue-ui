@@ -16,52 +16,50 @@
         <p>A pie chart is a circular statistical graphic, which is divided into slices to illustrate numerical proportion.</p>
 
 
-        <vueui-charts type="pie" :data="pieData" width="150" height="50"></vueui-charts>
+        <vueui-charts type="pie" :data="pieData" :width="100" :height="20"></vueui-charts>
 
         <h3>2. BarChart</h3>
 
         <p>A bar chart or bar graph is a chart that presents Grouped data with rectangular bars with lengths proportional to the values that they represent.</p>
 
-        <vueui-charts type="bar" :data="barData" width="150" height="50">></vueui-charts>
+        <vueui-charts type="bar" :data="barData" :width="100" :height="20">></vueui-charts>
 
         <h3>3. HorizontalBarChart</h3>
 
         <p>A horizontal bar chart is a variation on a vertical bar chart. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.</p>
 
-        <vueui-charts type="horizontalBar" :data="horizontalBarData" width="150" height="50">></vueui-charts>
+        <vueui-charts type="horizontalBar" :data="horizontalBarData" :width="100" :height="20">></vueui-charts>
 
         <h3>4. LineChart</h3>
 
         <p>A line chart or line graph is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments.</p>
 
-        <vueui-charts type="line" :data="lineData" width="150" height="50">></vueui-charts>
+        <vueui-charts type="line" :data="lineData" :width="100" :height="20">></vueui-charts>
 
         <h3>5. DoughnutChart</h3>
 
         <p>A doughnut chart is a variant of the pie chart, with a blank center allowing for additional information about the data as a whole to be included.</p>
 
-        <vueui-charts type="doughnut" :data="doughnutData" width="150" height="50">></vueui-charts>
+        <vueui-charts type="doughnut" :data="doughnutData" :width="100" :height="20">></vueui-charts>
 
 
         <h3>6. RadarChart</h3>
 
         <p>A radar chart is a graphical method of displaying multivariate data in the form of a two-dimensional chart of three or more quantitative variables represented on axes starting from the same point.</p>
 
-        <vueui-charts type="radar" :data="radarData" width="150" height="50">></vueui-charts>
+        <vueui-charts type="radar" :data="radarData" :width="100" :height="20">></vueui-charts>
 
         <h3>7. PolarAreaChart</h3>
 
         <p>Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.</p>
 
-        <vueui-charts type="polarArea" :data="polarData" width="150" height="50">></vueui-charts>
+        <vueui-charts type="polarArea" :data="polarData" :width="100" :height="20">></vueui-charts>
 
         <h3>8. BubbleChart</h3>
 
         <p>A bubble chart is used to display three dimensions of data at the same time. The location of the bubble is determined by the first two dimensions and the corresponding horizontal and vertical axes. The third dimension is represented by the size of the individual bubbles.</p>
 
-        <vueui-charts type="bubble" :data="bubbleData" width="150" height="50">></vueui-charts>
-
-
+        <vueui-charts type="bubble" :data="bubbleData" :width="100" :height="20">></vueui-charts>
 
       </div>
     </layout>
