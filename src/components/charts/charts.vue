@@ -58,12 +58,11 @@
       },
 
       initChart() {
-        this.chart = new Chart(this.$refs.chart.children[0], {
+        this.chart = new Chart(this.getCanvas(), {
           type: this.type,
           data: this.data,
           options: this.options
         });
-        console.log(this.$props);
       },
 
       getCanvas() {
