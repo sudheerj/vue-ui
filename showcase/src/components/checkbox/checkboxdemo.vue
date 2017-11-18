@@ -32,7 +32,6 @@
 <script>
 
   import Layout from "../layout";
-
   export default {
     name: 'checkboxdemo',
     components: {Layout},
@@ -45,9 +44,6 @@
     },
     methods: {
 
-      back: function () {
-        this.$router.go(-1);
-      }
     }
   };
 </script>

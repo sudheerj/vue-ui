@@ -2,7 +2,8 @@
   <div>
     <div :style="checkboxStyle" class="ui-chkbox ui-tristatechkbox ui-widget" :class="checkboxStyleClass">
       <div class="ui-helper-hidden-accessible">
-        <input ref=""input" type="text" :id="inputId" :name="name" :tabindex="tabindex" readonly :disabled="disabled" @keyup="onKeyup($event)" @keydown="onKeydown($event)" @focus="onFocus()" @blur="onBlur()">
+        <input ref="" input" type="text" :id="inputId" :name="name" :tabindex="tabindex" readonly :disabled="disabled" @keyup="onKeyup($event)" @keydown="onKeydown($event)" @focus="onFocus()" @blur="onBlur()">
+
       </div>
       <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default" @click="onClick($event)"
            :class="{'ui-state-active':value!=null,'ui-state-disabled':disabled,'ui-state-focus':focus}">
@@ -20,9 +21,12 @@
     name: 'vueui-tristatecheckbox',
     data: function () {
       return {
-        focus: false,
-        value: false
+        focus: false
       }
+    },
+    model: {
+      prop: 'value',
+      event: 'onChange'
     },
     props: {
       disabled: {
@@ -52,12 +56,15 @@
       checkboxStyleClass: {
         type: String,
         default: null
+      },
+      value: {
+        default: undefined
       }
 
     },
     methods: {
       onClick(event) {
-        if(!this.disabled) {
+        if (!this.disabled) {
           this.toggle(event);
           this.focus = true;
           this.$refs.input.focus();
@@ -65,26 +72,26 @@
       },
 
       onKeydown(event) {
-        if(event.keyCode == 32) {
+        if (event.keyCode == 32) {
           event.preventDefault();
         }
       },
 
       onKeyup(event) {
-        if(event.keyCode == 32) {
+        if (event.keyCode == 32) {
           this.toggle(event);
           event.preventDefault();
         }
       },
 
       toggle(event) {
-        if(this.value == null || this.value == undefined)
+        if (this.value == null || this.value == undefined)
           this.value = true;
-        else if(this.value == true)
+        else if (this.value == true)
           this.value = false;
-        else if(this.value == false)
+        else if (this.value == false)
           this.value = null;
-
+        this.$emit('onChange', this.value)
       },
 
       onFocus() {

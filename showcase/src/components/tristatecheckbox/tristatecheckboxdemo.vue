@@ -18,7 +18,7 @@
         <h3>2. Disabled</h3>
         <p>The checkbox selection is prevented using disabled attribute.</p>
         <h3>Boolean - {{checked}}</h3>
-        <vueui-tristatecheckbox v-model="checked" disabled="true"></vueui-tristatecheckbox>
+        <vueui-tristatecheckbox v-model="disabledCheck" :disabled="true"></vueui-tristatecheckbox>
 
       </div>
     </layout>

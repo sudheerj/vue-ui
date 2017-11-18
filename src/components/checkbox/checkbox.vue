@@ -1,19 +1,19 @@
 <template>
   <div>
-  <div :style="checkboxStyle" class="ui-chkbox ui-widget" :class="checkboxStyleClass">
-    <div class="ui-helper-hidden-accessible">
-      <input ref="cb" type="checkbox" :id="inputId" :name="name" :value="value" :checked="checked" @focus="onFocus"
-             @blur="onBlur"
-             :class="{'ui-state-focus':focused}" @change="handleChange" :disabled="disabled" :tabindex="tabindex">
+    <div :style="checkboxStyle" class="ui-chkbox ui-widget" :class="checkboxStyleClass">
+      <div class="ui-helper-hidden-accessible">
+        <input ref="cb" type="checkbox" :id="inputId" :name="name" :value="value" :checked="checked" @focus="onFocus"
+               @blur="onBlur"
+               :class="{'ui-state-focus':focused}" @change="handleChange" :disabled="disabled" :tabindex="tabindex">
+      </div>
+      <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default" @click="onClick($event,true)"
+           :class="{'ui-state-active':checked,'ui-state-disabled':disabled,'ui-state-focus':focused}">
+        <span class="ui-chkbox-icon ui-clickable" :class="{'fa fa-check':checked}"></span>
+      </div>
     </div>
-    <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default" @click="onClick($event,true)"
-         :class="{'ui-state-active':checked,'ui-state-disabled':disabled,'ui-state-focus':focused}">
-      <span class="ui-chkbox-icon ui-clickable" :class="{'fa fa-check':checked}"></span>
-    </div>
-  </div>
-  <label class="ui-chkbox-label" @click="onClick($event,true)"
-         :class="{'ui-label-active':checked, 'ui-label-disabled':disabled, 'ui-label-focus':focused}"
-         v-if="label" :for="inputId">{{label}}</label>
+    <label class="ui-chkbox-label" @click="onClick($event,true)"
+           :class="{'ui-label-active':checked, 'ui-label-disabled':disabled, 'ui-label-focus':focused}"
+           v-if="label" :for="inputId">{{label}}</label>
   </div>
 </template>
 <style lang="css" src="./checkbox.css"></style>
@@ -22,10 +22,13 @@
     name: 'vueui-checkbox',
     data: function () {
       return {
-        model: null,
         focused: false,
         checked: false
       }
+    },
+    model: {
+      prop: 'model',
+      event: 'onChange'
     },
     props: {
       disabled: {
@@ -34,7 +37,7 @@
       },
       value: {
         type: Boolean,
-        default: null
+        default: false
       },
       label: {
         type: String,
@@ -63,6 +66,9 @@
       checkboxStyleClass: {
         type: String,
         default: null
+      },
+      model: {
+        default: undefined
       }
 
     },
@@ -81,18 +87,18 @@
           this.$refs.cb.focus();
         }
       },
-      handleChange(event) {
+      handleChange(event) {
         this.checked = event.target.checked;
       },
       updateModel() {
-        if(!this.binary) {
-          if(this.checked)
+        if (!this.binary) {
+          if (this.checked)
             this.addValue();
           else
             this.removeValue();
         }
 
-        //this.onChange.emit(this.checked);
+        this.$emit('onChange', this.checked);
       },
       onFocus(event) {
         this.focused = true;

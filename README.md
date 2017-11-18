@@ -19,7 +19,7 @@ Vue.use(VueUI)
 
 ## Components
 
-- Charts(8 types)
+- Charts(pie,bar,horizontalBar,line,doughnut,area,radar and bubble)
 - Button
 - ProgressSpinner
 - ProgressBar
