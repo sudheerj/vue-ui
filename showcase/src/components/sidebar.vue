@@ -6,6 +6,7 @@
     <router-link to="/components/progressbar">ProgressBar</router-link>
     <router-link to="/components/checkbox">Checkbox</router-link>
     <router-link to="/components/tristatecheckbox">TriStateCheckbox</router-link>
+    <router-link to="/components/charts">Charts</router-link>
   </div>
   <router-view></router-view>
 </div>

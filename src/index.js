@@ -3,6 +3,7 @@ import ProgressSpinner from './components/progressspinner/progressspinner.vue'
 import ProgressBar from './components/progressbar/progressbar.vue'
 import Checkbox from './components/checkbox/checkbox.vue'
 import TristateCheckbox from './components/tristatecheckbox/tristatecheckbox.vue'
+import Chart from './components/charts/charts.vue'
 
 const components = {
   'vueui-button': Button,
@@ -10,6 +11,7 @@ const components = {
   'vueui-progressBar': ProgressBar,
   'vueui-checkbox': Checkbox,
   'vueui-tristatecheckbox': TristateCheckbox,
+  'vueui-charts': Chart
 }
 
 const install = function (Vue, opts = {}) {
