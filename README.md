@@ -28,6 +28,7 @@ Vue.use(VueUI)
 - Rating
 - ToggleButton
 - RadioButton
+- Captcha
 
 <hr/>
 
