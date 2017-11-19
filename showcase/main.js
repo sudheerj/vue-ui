@@ -20,6 +20,7 @@ import CheckboxDemo from './src/components/checkbox/checkboxdemo.vue'
 import TristateCheckboxDemo from './src/components/tristatecheckbox/tristatecheckboxdemo.vue'
 import ChartsDemo from './src/components/charts/chartsdemo.vue'
 import RatingDemo from './src/components/rating/ratingdemo.vue'
+import ToggleButtonDemo from './src/components/togglebutton/togglebuttondemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -30,6 +31,7 @@ const routes = [
   { path: '/components/tristatecheckbox', component: TristateCheckboxDemo },
   { path: '/components/charts', component: ChartsDemo },
   { path: '/components/rating', component: RatingDemo },
+  { path: '/components/togglebutton', component: ToggleButtonDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]

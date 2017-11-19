@@ -8,6 +8,7 @@
     <router-link to="/components/tristatecheckbox">TriStateCheckbox</router-link>
     <router-link to="/components/charts">Charts</router-link>
     <router-link to="/components/rating">Rating</router-link>
+    <router-link to="/components/togglebutton">ToggleButton</router-link>
   </div>
   <router-view></router-view>
 </div>

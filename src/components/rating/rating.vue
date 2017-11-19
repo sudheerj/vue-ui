@@ -15,15 +15,16 @@
 <!--<style lang="css" src="./rating.css"></style>-->
 <script>
   let starsArray = [];
+  let value = 0;
   export default {
     name: 'vueui-rating',
     data: function () {
       return {
-        starsArray: starsArray
+        starsArray, value
       }
     },
     model: {
-      prop: 'value',
+      prop: 'model',
       event: 'rating'
     },
     props: {
@@ -67,7 +68,7 @@
         type: String,
         default: null
       },
-      value: {
+      model: {
         type: Number,
         default: 0
       }
@@ -94,6 +95,7 @@
 
     },
     mounted: function () {
+      this.value = this.model;
       this.starsArray = [];
       for (let i = 0; i < this.stars; i++) {
         this.starsArray[i] = i;
