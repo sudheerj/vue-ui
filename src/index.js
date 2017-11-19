@@ -7,6 +7,7 @@ import Chart from './components/charts/charts.vue'
 import Rating from './components/rating/rating.vue'
 import ToggleButton from './components/togglebutton/togglebutton.vue'
 import RadioButton from './components/radiobutton/radiobutton.vue'
+import Captcha from './components/captcha/captcha.vue'
 
 const components = {
   'vueui-button': Button,
@@ -17,7 +18,8 @@ const components = {
   'vueui-charts': Chart,
   'vueui-rating': Rating,
   'vueui-toggleButton': ToggleButton,
-  'vueui-radioButton': RadioButton
+  'vueui-radioButton': RadioButton,
+  'vueui-captcha': Captcha
 }
 
 const install = function (Vue, opts = {}) {
