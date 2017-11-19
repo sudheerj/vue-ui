@@ -29,7 +29,7 @@ Vue.use(VueUI)
 
 <hr/>
 
-To encourage us and if you like the project then click start(💫)
+To encourage us and if you like the project then click star(💫)
 <hr/>
 
 ## How to Run
