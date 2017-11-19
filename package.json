@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Component library for VueJS framework",
   "author": "sudheerj <jsudheer50@gmail.com>",
-  "private": true,
+  "private": false,
+  "main": "./src/index.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
