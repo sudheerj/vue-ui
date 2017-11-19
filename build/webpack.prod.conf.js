@@ -73,7 +73,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.HashedModuleIdsPlugin(),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
+      name: 'libs',
       minChunks: function (module) {
         // any required modules inside node_modules are extracted to vendor
         return (
@@ -89,7 +89,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
-      chunks: ['vendor']
+      chunks: ['libs']
     }),
     // copy custom static assets
     new CopyWebpackPlugin([
