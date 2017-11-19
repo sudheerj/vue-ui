@@ -26,6 +26,8 @@ Vue.use(VueUI)
 - Checkbox
 - TriStateCheckbox
 - Rating
+- ToggleButton
+- RadioButton
 
 <hr/>
 

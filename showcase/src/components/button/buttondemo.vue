@@ -74,9 +74,6 @@
           alert(event.target.innerText)
         }
 
-      },
-      back: function () {
-        this.$router.go(-1);
       }
     }
   };
